@@ -1,2 +1,2 @@
 # DSA-Practice-Questions
-Here lies my DSA Questions practiced by me.
+Here lies DSA Questions practiced by me.
