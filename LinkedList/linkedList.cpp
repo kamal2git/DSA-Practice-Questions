@@ -7,6 +7,7 @@ class linkedList{
     //node* temp=head;
     node* takeInput(){
         int _data;
+        cout<<"Enter data : "<<endl;
         cin>>_data;
         head=NULL;
         node* temp=head;
@@ -21,10 +22,15 @@ class linkedList{
                 }
                 temp->next=&n;
             }
+            cout<<"Enter data : "<<endl;
             cin>>_data;
         }
         return head;
     }
-
-
 };
+int main(){
+    node n1(1);
+    linkedList ll;
+    ll.takeInput();
+    return 0;
+}
