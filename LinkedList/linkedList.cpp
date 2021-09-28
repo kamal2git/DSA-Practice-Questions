@@ -5,7 +5,7 @@ class linkedList{
     public:
     node* head;
     //node* temp=head;
-    node* takeInput(){
+    node* takeInputSMA(){          //taking input with static memory allocation
         int _data;
         cout<<"Enter data : "<<endl;
         cin>>_data;
@@ -27,10 +27,32 @@ class linkedList{
         }
         return head;
     }
+    node* takeInputDMA(){
+        int data;
+        cout<<"Enter node data : ";
+        cin>>data;
+        head=NULL;
+        node* temp=head;
+        while(data!=-1){
+            node* newNode = new node(data);
+            if(head=NULL){
+                head->next=newNode;
+            }
+            else{
+                while(temp->next!=NULL){
+                    temp=temp->next;
+                }
+                temp->next=newNode;
+            }
+            cin>>data;
+        }
+        return head;
+    }
+
 };
 int main(){
     node n1(1);
     linkedList ll;
-    ll.takeInput();
+    ll.takeInputSMA();
     return 0;
 }
