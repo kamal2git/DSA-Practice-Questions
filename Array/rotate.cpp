@@ -1,8 +1,8 @@
 #include<iostream>
 using namespace std;
-void rotateArray(int arr[], int n, int r){
+void rotateArray(int arr[], int n, int r){ //not working for r=n i.e., total rotation, fix it!
     int tempArr[r];
-    for(int i=0;i<n;i++){
+    for(int i=0;i<r;i++){
         tempArr[i]=arr[i];
     }
     int temp=r;
