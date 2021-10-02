@@ -14,7 +14,7 @@ node* takeInputBetter(){
         }
         else{
             tail->next=newNode;
-            tail=newNode;
+            tail=newNode;         //OR tail=tail->next;
         }
         cin>>data;
     }
