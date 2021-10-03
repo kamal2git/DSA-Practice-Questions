@@ -21,3 +21,12 @@ node* addNodeithpos(node* head, int data, int i){
     }
     return head;
 }
+/*int main(){
+    node* head = takeInputBetter();
+    print(head);
+    int i,data;
+    cin>>i>>data;
+    head=addNodeithpos(head,i,data);
+    print(head);
+    return 0;
+}*/
