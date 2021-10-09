@@ -1,7 +1,7 @@
 #include<iostream>
 #include "node.cpp"
 using namespace std;
-node* delNode(node* head, int i){
+node* delNode(node* head, int i){  //yet to be checked! I'll do it later.
     node* temp=head;
     if(i==0){
         head=head->next;
