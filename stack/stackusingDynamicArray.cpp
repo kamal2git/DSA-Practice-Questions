@@ -1,13 +1,14 @@
 #include<iostream>
 using namespace std;
+template <typename T>
 class stackUsingDynamicArray{
-    int *data;
+    T *data;
     int nextIndex;
     int capacity;
     
     public:
     stackUsingDynamicArray(){
-        data=new int[4];
+        data=new T[4];
         nextIndex=0;
         capacity=4;
     }
@@ -21,7 +22,7 @@ class stackUsingDynamicArray{
         else return false;*/
         return nextIndex==0;
     }
-    void DApush(int ele){                    // Dynamic Array push
+    void DApush(T ele){                    // Dynamic Array push
         if(nextIndex==capacity){
             int* newData = new int[2*capacity];
             for(int i=0;i<capacity;i++){
@@ -36,7 +37,7 @@ class stackUsingDynamicArray{
     int pop(){
         if(isEmpty()){
             cout<<"Stack is empty! nothing to pop."<<endl;
-            return INT_MIN;
+            return 0;
         }
         nextIndex--;
         return data[nextIndex];
@@ -44,13 +45,13 @@ class stackUsingDynamicArray{
     int top(){
         if(isEmpty()){
             cout<<"Stack is empty! nothing in top."<<endl;
-            return INT_MIN;
+            return 0;
         }
         return data[nextIndex-1];
     }
 };
 int main(){
-    stackUsingDynamicArray s;
+    stackUsingDynamicArray<int> s;
     s.DApush(10);
     s.DApush(20);
     s.DApush(30);
